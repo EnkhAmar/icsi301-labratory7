@@ -28,7 +28,7 @@ function Login() {
             <form onSubmit={handleSubmit}>
                 <h3 className="text-uppercase text-center mb-4">V-Network</h3>
                 <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
+                    <label htmlFor="exampleInputEmail1">Email Address</label>
                     <input autoComplete="username" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChangeInput} value={email} name="email" />
                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
@@ -45,7 +45,7 @@ function Login() {
                     Login
                 </button>
 
-                <p className="my-2">
+                <p className="my-2 text-center">
                     You don't have an account? <Link to="/register" style={{ color: "crimson" }}>Register</Link>
                 </p>
             </form>
