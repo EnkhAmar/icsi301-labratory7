@@ -109,7 +109,7 @@ function Register() {
                 </button>
 
                 <p className="my-2 text-center">
-                    Already have an account? <Link to="/login" style={{ color: "crimson" }}>Login</Link>
+                    Already have an account? <Link to="/" style={{ color: "crimson" }}>Login</Link>
                 </p>
             </form>
         </div>
