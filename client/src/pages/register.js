@@ -35,7 +35,7 @@ function Register() {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">V-Network</h3>
+                <h3 className="text-uppercase text-center mb-4" style={{ userSelect:'none' }}>Instagram</h3>
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
                     <input autoComplete="fullname" type="text" className="form-control" id="fullname" 
