@@ -12,7 +12,7 @@ function Register() {
         fullname: '', username: '', email: '', password: '', cf_password: '', gender: 'male' 
     }
     const [userData, setUserData] = useState(initialState)
-    const { fullname, username, email, password, cf_password, gender } = userData
+    const { fullname, username, email, password, cf_password } = userData
 
     const [typePass, setTypePass] = useState(false)
     const [typeCfPass, setTypeCfPass] = useState(false)

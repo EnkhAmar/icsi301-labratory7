@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import NotFound from '../components/NotFound'
 import { useSelector } from 'react-redux'
 
