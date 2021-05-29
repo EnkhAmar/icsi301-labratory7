@@ -34,11 +34,13 @@ export const updateProfileUser = ({ userData, avatar, auth }) => async (dispatch
     if (!userData.fullname)
     return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "Please add your full name." }})
 
-    if (!userData.fullname.length > 25)
+    if (userData.fullname.length > 25)
     return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "You full name must be less than 25 characters." }})
     
-    if (!userData.story.length > 200)
-    return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "Your story must be less than 200 characters." }})
+    if (userData.story.length > 200) {
+        console.log("error")
+        return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "Your story must be less than 200 characters." }})
+    }
     
     try {
         let media;
@@ -50,7 +52,7 @@ export const updateProfileUser = ({ userData, avatar, auth }) => async (dispatch
             ...userData,
             avatar: avatar ? media[0].url : auth.user.avatar
         }, auth.token)
-
+        console.log('res', res)
         dispatch({
             type: GLOBALTYPES.AUTH,
             payload: {
