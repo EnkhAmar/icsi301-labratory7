@@ -8,6 +8,8 @@ const FollowBtn = ({ user }) => {
     const { auth, profile } = useSelector(state => state)
     const dispatch = useDispatch()
 
+    
+
     useEffect(() => {
         if (auth.user.following.find(item => item._id === user._id)) {
             setFollowed(true)
