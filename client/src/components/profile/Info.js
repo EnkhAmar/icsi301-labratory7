@@ -42,7 +42,7 @@ const Info = () => {
                                         Edit Profile
                                     </button>
                                     
-                                    : <FollowBtn user={} />
+                                    : <FollowBtn user={user} />
                                 }
                                 
                             </div>
