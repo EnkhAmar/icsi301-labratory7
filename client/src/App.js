@@ -14,6 +14,7 @@ import StatusModal from './components/StatusModal'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { refreshToken } from './redux/actions/authAction'
+import { getPosts } from './redux/actions/PostAction'
 
 function App() {
   const { auth, status } = useSelector(state => state)
@@ -22,6 +23,10 @@ function App() {
   useEffect(() => {
     dispatch(refreshToken())
   }, [dispatch])
+
+  useEffect(() => {
+    if (auth.token) dispatch(getPosts(auth.token))
+  }, [dispatch, auth.token])
 
   return (
     <Router>

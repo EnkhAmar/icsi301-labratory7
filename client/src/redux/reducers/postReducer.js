@@ -1,7 +1,10 @@
 import { POST_TYPES } from '../actions/PostAction'
 
 const initialState = {
-    posts: []    
+    loading: false,
+    posts: [],
+    results: 0,
+    page: 2,
 }
 
 const postReducer = (state = initialState, action) => {
@@ -12,6 +15,19 @@ const postReducer = (state = initialState, action) => {
                 posts: [...state.posts, action.payload]
             }
         
+        case POST_TYPES.LOADING_POST:
+            return {
+                ...state,
+                loading: action.payload
+            }
+
+        case POST_TYPES.GET_POSTS:
+            return {
+                ...state,
+                posts: action.payload.posts,
+                result: action.payload.result,
+            }    
+
         default: 
             return state
     }
