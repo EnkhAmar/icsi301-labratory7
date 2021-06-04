@@ -10,9 +10,13 @@
 
 ### Прожектийг хэрхэн асаах вэ?
 Энэхүү прожектийг clone хийсний дараа
+
 `npm install` - backend dependecy суулгана
+
 `node server.js` эсвэл 'npm run dev' гэж асаах боломжтой.
+
 `cd client && npm install` гэж client фолдер буюу frontend-ийн хэсэгрүү орж, хэрэгтэй dependency суулгана.
+
 `npm start` - React App-аа асаана.
 
 ### Нэвтрэх нэр, нууц үг
@@ -27,4 +31,5 @@
 
 ### Ашигласан материалууд
 Free svg, icon -> https://feathericons.com/
+
 Free image hosting -> https://cloudinary.com/
