@@ -18,7 +18,10 @@ export const createPost = ({ content, images, auth }) => async (dispatch) => {
 
         const res = await postDataAPI('posts', {content, images: media}, auth.token)
 
-        dispatch({ type: POST_TYPES.CREATE_POST, payload: res.data.newPost })
+        dispatch({ 
+            type: POST_TYPES.CREATE_POST, 
+            payload: {...res.data.newPost, user: auth.user}
+        })
 
         dispatch({ type: GLOBALTYPES.ALERT, payload: {loading: false} })
     } catch (err) {
