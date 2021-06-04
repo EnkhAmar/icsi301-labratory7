@@ -14,7 +14,7 @@ import StatusModal from './components/StatusModal'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { refreshToken } from './redux/actions/authAction'
-import { getPosts } from './redux/actions/PostAction'
+import { getPosts } from './redux/actions/postAction'
 
 function App() {
   const { auth, status } = useSelector(state => state)

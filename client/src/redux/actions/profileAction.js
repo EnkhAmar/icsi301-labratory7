@@ -40,7 +40,6 @@ export const updateProfileUser = ({ userData, avatar, auth }) => async (dispatch
     return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "You full name must be less than 25 characters." }})
     
     if (userData.story.length > 200) {
-        console.log("error")
         return dispatch({ type: GLOBALTYPES.ALERT, payload: {error: "Your story must be less than 200 characters." }})
     }
     
@@ -54,7 +53,7 @@ export const updateProfileUser = ({ userData, avatar, auth }) => async (dispatch
             ...userData,
             avatar: avatar ? media[0].url : auth.user.avatar
         }, auth.token)
-        console.log('res', res)
+        
         dispatch({
             type: GLOBALTYPES.AUTH,
             payload: {
