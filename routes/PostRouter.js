@@ -9,5 +9,8 @@ router.route('/posts')
 router.route('/post/:id')
     .put(auth, postCtrl.updatePost)
 
+router.put('/post/:id/like', auth, postCtrl.likePost)
+router.put('/post/:id/unlike', auth, postCtrl.unLikePost)
+
 
 module.exports = router
