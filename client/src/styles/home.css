@@ -4,6 +4,7 @@
     box-shadow: 0 0 5px #ddd;
     padding: 20px;
     border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .status .statusBtn {
     background: #f1f1f1;
@@ -64,6 +65,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
+    user-select: none;
 }
 .posts .card_icon_menu i {
     font-size: 28px;
